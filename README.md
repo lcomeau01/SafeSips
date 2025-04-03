@@ -15,8 +15,7 @@ Key Features:   <br>
 <br>
 
 ### 🖥️ Live Demo
-
-
+![A Live Demo of Searching For a Bar and Leaving a Review](/Safe Sips Keywork Seach and Review.mov)
 
 <br>
 
