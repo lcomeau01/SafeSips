@@ -1,0 +1,22 @@
+<br><input type = "button" id = "nearme" value = "NearMe" />
+        
+        <script>
+            b_near = document.getElementById("nearme"); 
+            b_near.onclick = function() {
+                var s = document.getElementById("searchterm");
+                s.innerHTML = "My Location";
+                
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const mylat = position.coords.latitude;
+                        const mylon = position.coords.longitude;
+                        console.log(mylat, mylon);
+                        searchUni2(mylat, mylon); 
+                    });
+                    } 
+                    else {
+                        document.getElementById("display").innerHTML = "Sorry, Geolocation is not supported by this browser. Try a search!";
+                        console.log("Geolocation is not supported by this browser.");
+                    }
+            }
+            </script>
