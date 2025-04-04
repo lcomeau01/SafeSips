@@ -1,5 +1,5 @@
 ### **Safe Sips 🍸**  
-*Find bars and breweries with safety-oriented reviews—written by women, for women.*  
+*Find bars and breweries with safety-oriented reviews – written by women, for women.*  
 
 ---
 
