@@ -1,3 +1,4 @@
+<?php include 'cache_header.php'; ?>
 <html>
     <head> 
         <title>Reviews</title>
@@ -230,6 +231,8 @@
     </head>
     <body>
         <?php
+            include 'cache_header.php'; 
+
             // header 
             $logo = "<div class='logo'> 
                     <h1> <a href='brewery_search.html'> Safe <img src='icon.png'> Sips </a> </h1>
@@ -243,9 +246,9 @@
             echo "<h1 id='title' style = 'text-align: center; '>Reviews for " . $name . "</h1>";
 
             $hostname = "localhost";
-            $username = "u5xdbxn1kpzes";
-            $password = "3b7nzj8bzxph";
-            $database = "dbt2ay4kxhkbvz";
+            $username = "ukbrbehyyup86";
+            $password = "wjickzoenj4i";
+            $database = "dbvlixzliwiiqg";
             $barinformation = new mysqli($hostname, $username, $password, $database);
 
             $mysqlstatement = "SHOW TABLES FROM $database";
