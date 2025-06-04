@@ -14,7 +14,7 @@ Key Features:   <br>
 <br>
 
 
-### 📸 Screenshots
+### Screenshots
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; max-width: 900px;">
   <img src="https://github.com/user-attachments/assets/9bd0c6f3-6584-4d1a-a6db-89a6bfe36082" alt="image1" style="width: 48%; object-fit: contain;" />
@@ -30,10 +30,32 @@ Key Features:   <br>
 
 <br>
 
-### 🛠️ Tech Stack
+### Tech Stack
 - **Frontend**: HTML, CSS, JavaScript  
 - **APIs**: [OpenBreweryDB](https://www.openbrewerydb.org/), [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/)  
-- **Backend**: PHP (for handling user authentication, user databases, and reviews databases), SQL (Hosted Databases) 
+- **Backend**: PHP (for handling user authentication, user databases, and reviews databases), SQL (Hosted Databases)
+
+### File Overview
+─ brewery_search.html # Main search UI
+─ login.php # Login form and JS validation
+─ loginformvalidation.php # Validates login credentials
+─ signup.php # Signup form with JS checks
+─ formvalidation.php # Handles new account creation (to be created)
+─ leaveReview.php # Saves reviews for a bar and user
+─ cache_header.php # Used to control caching headers
+
+## 📁 File Overview
+
+| File Name                 | Description |
+|--------------------------|-------------|
+| `brewery_search.html`    | The main interface for searching and viewing brewery/bar reviews. Includes dynamic elements and links to review forms. |
+| `login.php`              | Login page with frontend form validation using JavaScript. Calls `loginformvalidation.php` to authenticate users. |
+| `loginformvalidation.php`| Validates user credentials against the database and redirects based on success or failure. |
+| `signup.php`             | User signup form with client-side JavaScript validation. Sends input to `formvalidation.php`. |
+| `formvalidation.php`     | Handles signup logic, creates a new user in the `useraccounts` table, and a user-specific reviews table. *(You may need to create this file if it doesn't exist yet.)* |
+| `leaveReview.php`        | Accepts and stores user reviews for a specific bar, creating entries in both bar-specific and user-specific tables. |
+| `cache_header.php`       | Common PHP include used to disable browser caching for pages like login or signup. |
+
 
 ### Credits: 
 - Icons by Font Awesome
