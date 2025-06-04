@@ -1,20 +1,24 @@
+<?php include 'cache_header.php'; ?>
 <html>
     <head>
         <title>Validating</title>
     </head>
     <body>
         <?php
+            include 'cache_header.php'; 
             $user = $_GET['user'];
             $pass = $_GET['password'];
             $verify = $_GET['verify'];
             $email = $_GET['email'];
 
             $hostname = "localhost";
-            $username = "u5xdbxn1kpzes";
-            $password = "3b7nzj8bzxph";
-            $database = "dbmzgyymsfwabx";
-
+            $username = "ukbrbehyyup86";
+            $password = "wjickzoenj4i";
+            $database = "dbm89mg0vlmcuz";
+            
+            
             $useraccounts = new mysqli($hostname, $username, $password, $database);
+
 
             $sqlstatement = "SELECT Email FROM useraccounts WHERE Email = '" . $email . "'";
             $emailsearch = $useraccounts->query($sqlstatement);
