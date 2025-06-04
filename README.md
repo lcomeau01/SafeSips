@@ -43,9 +43,9 @@ Key Features:   <br>
 | `login.php`              | Login page with frontend form validation using JavaScript. Calls `loginformvalidation.php` to authenticate users. |
 | `loginformvalidation.php`| Validates user credentials against the database and redirects based on success or failure. |
 | `signup.php`             | User signup form with client-side JavaScript validation. Sends input to `formvalidation.php`. |
-| `formvalidation.php`     | Handles signup logic, creates a new user in the `useraccounts` table, and a user-specific reviews table. *(You may need to create this file if it doesn't exist yet.)* |
+| `formvalidation.php`     | Handles signup logic, creates a new user in the `useraccounts` table, and a user-specific reviews table. |
 | `leaveReview.php`        | Accepts and stores user reviews for a specific bar, creating entries in both bar-specific and user-specific tables. |
-| `cache_header.php`       | Common PHP include used to disable browser caching for pages like login or signup. |
+| `cache_header.php`       | PHP include used to disable browser caching for pages like login or signup. |
 
 
 ### Credits: 
