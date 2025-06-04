@@ -1,3 +1,4 @@
+<?php include 'cache_header.php'; ?>
 <html>
     <head> 
         <title>Login</title>
@@ -136,6 +137,10 @@
     </head>
     <body>
         <?php
+
+            include 'cache_header.php'; 
+
+            
             $logo = "<div class='logo'> 
                 <h1> <a href='brewery_search.html'> Safe <img src='icon.png'> Sips </a> </h1>
             </div>"; 
