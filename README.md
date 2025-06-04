@@ -15,13 +15,17 @@ Key Features:   <br>
 
 
 ### 📸 Screenshots
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/9bd0c6f3-6584-4d1a-a6db-89a6bfe36082" />
-<img width="1430" alt="image" src="https://github.com/user-attachments/assets/d1e30627-8259-4309-a6cf-70419fb1502f" />
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/0d3e3e7f-97d5-428d-8b2d-39bac03ceaaa" />
-<img width="1438" alt="image" src="https://github.com/user-attachments/assets/b63e6966-9522-42de-8a82-91ab50a4d84d" />
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/875631d3-d7cb-43cb-98c3-e0c6445c3f30" />
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/c7acda50-e872-4809-b8d7-efd8eb6789fd" />
-<img width="1423" alt="image" src="https://github.com/user-attachments/assets/1a3b2b42-5657-40ef-b1f1-84fb4324456b" />
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px; max-width: 900px;">
+  <img src="https://github.com/user-attachments/assets/9bd0c6f3-6584-4d1a-a6db-89a6bfe36082" alt="image1" style="width: 48%; object-fit: contain;" />
+  <img src="https://github.com/user-attachments/assets/d1e30627-8259-4309-a6cf-70419fb1502f" alt="image2" style="width: 48%; object-fit: contain;" /> 
+  <img src="https://github.com/user-attachments/assets/0d3e3e7f-97d5-428d-8b2d-39bac03ceaaa" alt="image3" style="width: 48%; object-fit: contain;" />
+  <img src="https://github.com/user-attachments/assets/b63e6966-9522-42de-8a82-91ab50a4d84d" alt="image4" style="width: 48%; object-fit: contain;" />
+  <img src="https://github.com/user-attachments/assets/875631d3-d7cb-43cb-98c3-e0c6445c3f30" alt="image5" style="width: 48%; object-fit: contain;" />
+  <img src="https://github.com/user-attachments/assets/c7acda50-e872-4809-b8d7-efd8eb6789fd" alt="image6" style="width: 48%; object-fit: contain;" />
+  <img src="https://github.com/user-attachments/assets/1a3b2b42-5657-40ef-b1f1-84fb4324456b" alt="image7" style="width: 48%; object-fit: contain;" />
+</div>
+
 
 
 <br>
