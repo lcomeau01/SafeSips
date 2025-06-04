@@ -35,16 +35,7 @@ Key Features:   <br>
 - **APIs**: [OpenBreweryDB](https://www.openbrewerydb.org/), [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/)  
 - **Backend**: PHP (for handling user authentication, user databases, and reviews databases), SQL (Hosted Databases)
 
-### File Overview
-─ brewery_search.html # Main search UI
-─ login.php # Login form and JS validation
-─ loginformvalidation.php # Validates login credentials
-─ signup.php # Signup form with JS checks
-─ formvalidation.php # Handles new account creation (to be created)
-─ leaveReview.php # Saves reviews for a bar and user
-─ cache_header.php # Used to control caching headers
-
-## 📁 File Overview
+## File Overview
 
 | File Name                 | Description |
 |--------------------------|-------------|
