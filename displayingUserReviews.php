@@ -1,3 +1,4 @@
+<?php include 'cache_header.php'; ?>
 <html>
     <head>
         <title>Displaying User Reviews</title>
@@ -149,9 +150,9 @@
             echo $logo; 
 
             $hostname = "localhost";
-            $username = "u5xdbxn1kpzes";
-            $password = "3b7nzj8bzxph";
-            $database = "db8hyiqgvxvd9n";
+            $username = "ukbrbehyyup86";
+            $password = "wjickzoenj4i";
+            $database = "dbqgoasbznugui";
             
             $reviewinfo = new mysqli($hostname, $username, $password, $database);
 
