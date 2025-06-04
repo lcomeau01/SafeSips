@@ -1,3 +1,4 @@
+<?php include 'cache_header.php'; ?>
 <html>
     <head>
         <title>Left a Review</title>
@@ -35,10 +36,13 @@
     </head>
     <body>
         <?php
+            include 'cache_header.php'; 
+
+
             $hostname = "localhost";
-            $username = "u5xdbxn1kpzes";
-            $password = "3b7nzj8bzxph";
-            $database = "dbt2ay4kxhkbvz";
+            $username = "ukbrbehyyup86";
+            $password = "wjickzoenj4i";
+            $database = "dbvlixzliwiiqg";
             $barinformation = new mysqli($hostname, $username, $password, $database);
 
             $barid = $_GET['barid'];
@@ -60,7 +64,7 @@
             
             $insertsql = "INSERT INTO " . $baridcomplete . " (security, overall, comments, date) VALUES ('$security', '$overall', '$comments', '$currdate')";
             
-            $databasetwo = "db8hyiqgvxvd9n";
+            $databasetwo = "dbqgoasbznugui";
             $usrnm = "" . $_GET['usrnm'];
             $userreviews = new mysqli($hostname, $username, $password, $databasetwo);
 
