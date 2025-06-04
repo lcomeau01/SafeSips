@@ -1,7 +1,7 @@
 ### **Safe Sips 🍸**  
 *Find bars and breweries with safety-oriented reviews – written by women, for women.*  
+By: Lily Comeau(<a href= "https://github.com/lcomeau01">@lcomeau01</a>), Elizabeth Cucuzzella (<a href="https://github.com/ecucuzzella">@ecucuzzella</a>), and Rachel Dakermanji (<a href="https://github.com/rdakermanji">@rdakermanji</a>). 
 
----
 
 ### Overview
 Safe Sips is a web application that helps users find bars and breweries based on keywords, city, postcode, or university location. It allows users to read and submit safety-focused reviews to create a safer nightlife experience. It is targeted towards young women in University, allowing them to find a safe bar within walking distance. 
@@ -10,7 +10,7 @@ Key Features:   <br>
 ✅ Search by **Keyword, University, or Location**  <br>
 ✅ Displays bars and breweries near you  <br>
 ✅ Provides **directions & reviews** for each bar   <br>
-✅ Mobile-responsive, **clean UI**   <br>
+✅ Mobile-responsive up to **550px**, clean UI <br>
 <br>
 
 
