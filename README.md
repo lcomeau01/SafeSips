@@ -4,19 +4,24 @@
 ---
 
 ### Overview
-Safe Sips is a web application that helps users find bars and breweries based on keywords, city, or university location. It allows users to read and submit safety-focused reviews to create a safer nightlife experience. It is targeted towards young women in University, allowing them to find a safe bar within walking distance. 
+Safe Sips is a web application that helps users find bars and breweries based on keywords, city, postcode, or university location. It allows users to read and submit safety-focused reviews to create a safer nightlife experience. It is targeted towards young women in University, allowing them to find a safe bar within walking distance. 
 
 Key Features:   <br>
 ✅ Search by **Keyword, University, or Location**  <br>
 ✅ Displays bars and breweries near you  <br>
 ✅ Provides **directions & reviews** for each bar   <br>
 ✅ Mobile-responsive, **clean UI**   <br>
-
 <br>
 
 
 ### 📸 Screenshots
-
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/9bd0c6f3-6584-4d1a-a6db-89a6bfe36082" />
+<img width="1430" alt="image" src="https://github.com/user-attachments/assets/d1e30627-8259-4309-a6cf-70419fb1502f" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/0d3e3e7f-97d5-428d-8b2d-39bac03ceaaa" />
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/b63e6966-9522-42de-8a82-91ab50a4d84d" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/875631d3-d7cb-43cb-98c3-e0c6445c3f30" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/c7acda50-e872-4809-b8d7-efd8eb6789fd" />
+<img width="1423" alt="image" src="https://github.com/user-attachments/assets/1a3b2b42-5657-40ef-b1f1-84fb4324456b" />
 
 
 <br>
@@ -24,4 +29,7 @@ Key Features:   <br>
 ### 🛠️ Tech Stack
 - **Frontend**: HTML, CSS, JavaScript  
 - **APIs**: [OpenBreweryDB](https://www.openbrewerydb.org/), [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/)  
-- **Backend**: PHP (for handling user authentication, user databases, and reviews databases)  
+- **Backend**: PHP (for handling user authentication, user databases, and reviews databases)
+
+### Credits: 
+- Icons by Font Awesome
