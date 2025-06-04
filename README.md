@@ -33,7 +33,7 @@ Key Features:   <br>
 ### 🛠️ Tech Stack
 - **Frontend**: HTML, CSS, JavaScript  
 - **APIs**: [OpenBreweryDB](https://www.openbrewerydb.org/), [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/)  
-- **Backend**: PHP (for handling user authentication, user databases, and reviews databases)
+- **Backend**: PHP (for handling user authentication, user databases, and reviews databases), SQL (Hosted Databases) 
 
 ### Credits: 
 - Icons by Font Awesome
