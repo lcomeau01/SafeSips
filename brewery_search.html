@@ -242,25 +242,26 @@
 
             function selectSearchType() {
                 var typeofsearch = document.getElementById('searchtype').value;
+                var searched = document.getElementById('searchterm').value;
                 if (typeofsearch == "keyword") {
-                    searchBreweries();
+                    searchBreweries(searched);
                 }
                 if (typeofsearch == "university") {
-                    searchBreweriesByUni();
+                    fetchData(searched);
                 }
             }
 
-            function searchBreweriesByUni() {
+            function searchBreweriesByUni(uni) {
                 //RACHEL: can update with the results from searching for breweries by university
-                var searched = document.getElementById('searchterm').value;
-                fetchData(searched);
+                fetchData(uni);
             }
         
         function fetchData(locationInput) { 
-            urlFront = "https://api.mapbox.com/geocoding/v5/mapbox.places/"; 
-            urlBack = ".json?proximity=ip&access_token=pk.eyJ1IjoibGNvbWVhMDEiLCJhIjoiY2x1ZDZ2a3R2MTU5aDJscXRncGN6eGVyZiJ9.X4iYaYaExvE_zPNO-3vE-w"; 
+            urlFront = "https://api.mapbox.com/search/searchbox/v1/suggest?q="; 
+            urlBack = "&access_token=pk.eyJ1IjoibGNvbWVhMDEiLCJhIjoiY2x1ZDZ2a3R2MTU5aDJscXRncGN6eGVyZiJ9.X4iYaYaExvE_zPNO-3vE-w&limit=10&country=us&session_token=0cde2bb1-54b0-4548-8197-32f0a2ab05eb"; 
             urlWhole = urlFront + locationInput + urlBack; 
-            urlWhole = urlWhole.replace(' ', '%20');
+            urlWhole = urlWhole.replace(' ', '+');
+            console.log(urlWhole); 
 
             res = fetch(urlWhole)
             .then (res => res.text())
@@ -268,20 +269,57 @@
                 {
                     data = JSON.parse(data);  
                     index = 0; 
+                    suggestions = data.suggestions; 
 
                     // these searches narrow down the location to a US University
-                    while (data.features[index].properties.category != "college, university") { 
+                    while (index < suggestions.length && 
+                        ( data.suggestions[index].name.toLowerCase() !== locationInput.toLowerCase().trim() || 
+                        !(data.suggestions[index].maki === "college" || data.suggestions[index].maki === "school")))
+                    { 
+                        console.log(data.suggestions[index].context.country.name); 
+                        console.log(data.suggestions[index].name.toLowerCase()); 
+                        console.log(locationInput.toLowerCase()); 
+                        console.log(data.suggestions[index].maki); 
+                        console.log(index); 
                         index++; 
                     }
-                    while (data.features[index].place_name.search("United States") == -1) { 
-                        index++; 
+                    if(index < suggestions.length)
+                    { 
+                        console.log(index); 
+                        postcode = data.suggestions[index].full_address; 
+                        console.log(postcode); 
+                        find_long_lat(postcode); 
                     }
-                    longitude = data.features[index].center[0]; 
-                    latitude = data.features[index].center[1];
-                    searchUni2(latitude,longitude);     
+                    else { 
+                        document.getElementById("display").innerHTML = "<p>Sorry! We do not yet have information on " + locationInput + ". <\p>";
+                        document.getElementById("display").innerHTML += "<p>Maybe try the full name, if you used a nickname. <\p>";
+                    }
+
                 })
             .catch (error => { document.getElementById("display").innerHTML = "Sorry! We do not yet have information on " + locationInput + ".";
                 console.log("this didn't work: " + error)} );
+        } 
+
+        function find_long_lat(place) { 
+           
+            urlFront = "https://api.mapbox.com/search/geocode/v6/forward?q="; 
+            urlBack = " &access_token=pk.eyJ1IjoibGNvbWVhMDEiLCJhIjoiY2x1ZDZ2a3R2MTU5aDJscXRncGN6eGVyZiJ9.X4iYaYaExvE_zPNO-3vE-w"; 
+            place = encodeURIComponent(place); 
+            urlWhole = urlFront + place + urlBack; 
+            console.log(urlWhole); 
+
+            res = fetch(urlWhole)
+            .then (res => res.text())
+            .then (data =>
+                {
+                    data = JSON.parse(data);  
+
+                    lon = data.features[0].properties.coordinates.longitude; 
+                    lat = data.features[0].properties.coordinates.latitude; 
+                    searchUni2(lat, lon); 
+
+                    
+                });  
         } 
 
         //made new function bc for some reason i couldnt return lat/long in the fetchdata function -> so i wanted to call this directly
@@ -306,27 +344,8 @@
                 });
         }
 
-        function searchBreweries() {
-                var searched = document.getElementById('searchterm').value;
-                searched = searched.replace(' ', '%20');
-                var url = 'https://api.openbrewerydb.org/v1/breweries/search?query=';
-                url = url + "" + searched;
-                
-                fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        alert("Failure");
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    textcontent = "";
-                    data.forEach(brew => {
-                        textcontent += displayingInformation(brew);
-                    })
-                    var display = document.getElementById('display');
-                    display.innerHTML = textcontent;
-                });
+        function searchBreweries(searched) {
+                find_long_lat(searched); 
             }
 
             function displayingInformation(brew) {
